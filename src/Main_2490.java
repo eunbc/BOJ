@@ -14,6 +14,7 @@ public class Main_2490 {
         play(Arrays.copyOfRange(array,8,12));
     }
 
+    //윷놀이
     private static void play(int[] arr) {
         int k = 0;
         for(int i=0; i<arr.length; i++) {
