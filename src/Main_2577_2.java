@@ -1,18 +1,16 @@
 import java.util.Scanner;
 
-public class Main_2577 {
+public class Main_2577_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        long num = 1;
+        int num = 1;
         int[] arr = new int[10];
         for(int i=0; i<3; i++) {
             num *= sc.nextInt();
         }
-        String number = String.valueOf(num);
-        for(int i=0; i<number.length(); i++) {
-            for(int j=0; j<arr.length; j++) {
-                if(String.valueOf(j).equals(number.substring(i,i+1))) arr[j]++;
-            }
+        while(num > 0) {
+            arr[num%10]++;
+            num/=10;
         }
 
         for(int i=0; i<arr.length; i++) {
